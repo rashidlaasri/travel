@@ -2,8 +2,8 @@
 
 namespace RachidLaasri\Travel;
 
-use Closure;
 use Carbon\Carbon;
+use Closure;
 
 class Travel
 {
