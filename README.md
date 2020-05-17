@@ -24,7 +24,7 @@ Travel::to('01-01-2009');
 ```php
 // Travel to the past and un-say that embarassing thing you said and come back.
 Travel::to('-5 minutes', fucntion() {
-	// Do something.
+    // Do something.
 });
 
 ```
