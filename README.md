@@ -1,4 +1,12 @@
-# Travel 🚀
+<p align="center"></p>
+
+<p align="center">
+    <img src="https://styleci.io/repos/264614816/shield" alt="StyleCI">
+    <img src="https://img.shields.io/github/license/rashidlaasri/travel" alt="License">
+    <img src="https://img.shields.io/travis/rashidlaasri/travel/master" alt="Travis Ci build">
+    <img src="https://img.shields.io/packagist/v/rachidlaasri/travel.svg" alt="Latest Version on Packagist">
+    <img src="https://img.shields.io/packagist/dt/rachidlaasri/travel.svg" alt="Total Downloads">
+</p>
 
 Travel is a framework agnostic wrapper around [Carbon](https://github.com/briannesbitt/Carbon), it helps you travel to a certain date and travel back to today's date in a readable way.
 
