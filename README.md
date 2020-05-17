@@ -1,7 +1,7 @@
 <p align="center"></p>
 
 <p align="center">
-    <img src="https://styleci.io/repos/264614816/shield" alt="StyleCI">
+    <img src="https://styleci.io/repos/264614816/shield?style=plastic&branch=master" alt="StyleCI">
     <img src="https://img.shields.io/github/license/rashidlaasri/travel" alt="License">
     <img src="https://img.shields.io/travis/rashidlaasri/travel/master" alt="Travis Ci build">
     <img src="https://img.shields.io/packagist/v/rachidlaasri/travel.svg" alt="Latest Version on Packagist">
