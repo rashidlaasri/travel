@@ -35,8 +35,13 @@ class TravelTest extends TestCase
         $this->assertEquals('22-04-1994', Carbon::now()->format('d-m-Y'));
 
         Travel::to('22-04-1995', function () {
-            // Do something!
+            $this->assertEquals(
+                '22-04-1995',
+                Carbon::now()->format('d-m-Y'),
+                'Code inside the Closure should match the travel time.'
+            );
         });
+
         $this->assertNotEquals('22-04-1995', Carbon::now()->format('d-m-Y'));
     }
 
