@@ -8,6 +8,13 @@ use RachidLaasri\Travel\Travel;
 
 class TravelTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        Travel::back();
+    }
+
     /** @test */
     public function it_can_travel_to_a_datetime()
     {
