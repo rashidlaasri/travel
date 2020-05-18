@@ -33,6 +33,7 @@ class TravelTest extends TestCase
     {
         Travel::to('22-04-1994');
         $this->assertEquals('22-04-1994', Carbon::now()->format('d-m-Y'));
+
         $calledCount = 0;
 
         Travel::to('22-04-1995', function () use (&$calledCount) {
