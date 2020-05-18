@@ -8,6 +8,13 @@ use RachidLaasri\Travel\Travel;
 
 class TravelTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        Travel::back();
+    }
+
     /** @test */
     public function it_can_travel_to_a_datetime()
     {
@@ -27,9 +34,19 @@ class TravelTest extends TestCase
         Travel::to('22-04-1994');
         $this->assertEquals('22-04-1994', Carbon::now()->format('d-m-Y'));
 
-        Travel::to('22-04-1995', function () {
-            // Do something!
+        $calledCount = 0;
+
+        Travel::to('22-04-1995', function () use (&$calledCount) {
+            $this->assertEquals(
+                '22-04-1995',
+                Carbon::now()->format('d-m-Y'),
+                'Code inside the Closure should match the travel time.'
+            );
+
+            $calledCount++;
         });
+
+        $this->assertEquals(1, $calledCount, 'Expect the closure to be called once.');
         $this->assertNotEquals('22-04-1995', Carbon::now()->format('d-m-Y'));
     }
 
