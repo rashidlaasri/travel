@@ -1,4 +1,6 @@
-<p align="center"></p>
+<p align="center">
+<img width="70%" alt="rashidlaasri travel" src="https://user-images.githubusercontent.com/36804104/82325079-274ca780-99ca-11ea-8c3d-afd163d1bba0.png">
+</p>
 
 <p align="center">
     <img src="https://styleci.io/repos/264614816/shield?branch=master" alt="StyleCI">
