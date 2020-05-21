@@ -28,6 +28,24 @@ class Travel
     }
 
     /**
+     * Travel to each date given.
+     *
+     * @param mixed $dates
+     * @param Closure $callback
+     * @return void
+     */
+    public static function each($dates, Closure $callback): void
+    {
+        foreach ($dates as $date) {
+            Carbon::setTestNow($date);
+
+            $callback();
+        }
+
+        self::back();
+    }
+
+    /**
      * Travel back to the current date time.
      *
      * @return Carbon
