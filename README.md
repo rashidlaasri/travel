@@ -38,6 +38,16 @@ Travel::to('-5 minutes', function() {
 });
 
 ```
+
+Travel to multiple dates with:
+
+```php
+// Travel to random dates, talk with people from the past and come back.
+Travel::each(['01-01-2009', '04-02-2009', '03-02-2006'], function() {
+    // Do something.
+});
+```
+
  Reset the date to today's date
 ```php
 Travel::back();
