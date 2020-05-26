@@ -17,7 +17,7 @@ Travel is a framework agnostic wrapper around [Carbon](https://github.com/briann
 You can install the package via composer:
 
 ```bash
-composer require rachidlaasri/travel
+composer require --dev rachidlaasri/travel
 ```
 
 ## Usage
@@ -36,7 +36,6 @@ Travel::to('01-01-2009');
 Travel::to('-5 minutes', function() {
     // Do something.
 });
-
 ```
 
 Travel to multiple dates with:
