@@ -25,26 +25,40 @@ composer require --dev rachidlaasri/travel
  Travel to a certain date with:
 
 ```php
-// Jump to 2009 and watch the last Michael Jackson live performance.
-Travel::to('01-01-2009');
+public function testBasicTest()
+{
+    Travel::to('01-01-2009');
+
+    // Date is now 01-01-2009
+    // code goes here...
+}
 ```
 
  Travel to a given date, excute a piece of code and reset:
 
 ```php
-// Travel to the past and un-say that embarassing thing you said and come back.
-Travel::to('-5 minutes', function() {
-    // Do something.
-});
+public function testBasicTest()
+{
+    // Verify that the user cannot update a post after 10 minutes of its creation time.
+    $post = factory(App\Post::class)->create();
+
+    Travel::to('10 minutes', function() use ($post) {
+        $this->postJson(route('posts.edit', $post->id), [])
+            ->assertStatus(403);
+    });
+}
 ```
 
 Travel to multiple dates with:
 
 ```php
-// Travel to random dates, talk with people from the past and come back.
-Travel::each(['01-01-2009', '04-02-2009', '03-02-2006'], function() {
-    // Do something.
-});
+public function testBasicTest()
+{
+    // Travel to multiple dates:
+    Travel::each(['01-01-2009', '04-02-2009', '03-02-2006'], function() {
+        // Do something.
+    });
+}
 ```
 
  Reset the date to today's date
