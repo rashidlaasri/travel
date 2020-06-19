@@ -1,6 +1,10 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [1.0.3] - 2020-06-19
+
+- Add support for Carbon >= 1.29.0
+
 ## [1.0.2] - 2020-06-14
 
 - Add travel each method.
